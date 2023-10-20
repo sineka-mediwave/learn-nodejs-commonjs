@@ -1,6 +1,13 @@
-const express = require("express");
-const morgan = require("morgan");
-const config = require("./config");
+//node js
+import express from "express";
+import morgan from "morgan";
+import config from "./config.js";
+
+//common js
+// const express = require("express");
+// const morgan = require("morgan");
+// const config = require("./config");
+
 const app = express();
 app.use(morgan("combined"));
 
@@ -44,9 +51,9 @@ app.delete("/", (req, res) => {
   });
 });
 //importing utils using common js
-const { stringLength } = require("./utils/stringHelper");
+// const { stringLength } = require("./utils/stringHelper");
 console.log("hello World");
-console.log(stringLength("12453"));
+// console.log(stringLength("12453"));
 
 app.listen(config.port, () => {
   console.log(`server running on port ${config.port}`);

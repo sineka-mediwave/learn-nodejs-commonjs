@@ -10,19 +10,69 @@
 - dowlaod `npm i morgan`, http logging library
 - We should not push the node_modules to git, so create a `.gitignore` file enter the node_modules.
 
-## Creating simple utils function
+## Creating commonjs
 
 - create a folder called utils, within this we can create a files that do the specific function.
+- import command common js
+
+```
+\\common js import method
+const express = require("express");
+const morgan = require("morgan");
+const config = require("./config");
+```
+
+- export command common js
 
 ```
 //common js export method
 module.exports = {
   stringLength,
 };
+module.exports = config;
 ```
 
 - To run the code, <i>node app</i>.
 
 ## Create a port to run
 
-- In the config file inside the utils folder
+- In the config file and set port.
+- install nodemon, write the scripts to start and dev
+
+- `npm start` runs node app command
+
+```
+
+```
+
+"main": "index.js",
+"scripts": {
+"start": "node app",
+"dev": "nodemon"
+},
+
+```
+
+```
+
+- while running `npm run dev` it throws an error,after calling main with correct path, it resolved.
+
+```
+"main": "app/index.js",
+```
+
+## Import node js
+
+- To use import and export, add `"type"="module"` in package.json.
+- import and export using node js
+
+```
+//node js
+import express from "express";
+import morgan from "morgan";
+import config from "./config.js";
+```
+
+```
+export default config;
+```

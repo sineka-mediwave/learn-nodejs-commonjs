@@ -2,4 +2,5 @@ const config = {
   port: 7892,
 };
 
-module.exports = config;
+//module.exports = config;
+export default config;
