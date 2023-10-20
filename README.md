@@ -5,10 +5,12 @@
 - In the utils folder, we can create the our other js files.
 - install node inside the folder, npm init.
 - `npm init -y` command creates the package.json with default version settings.
-- download `npm i express`
-- download `npm i -D nodemon`
+- download express `npm i express`, Allows you to define application routes using HTTP methods and URLs.
+- download `npm i -D nodemon`, It monitors your project directory and automatically restarts your node application when it detects any changes.
+- dowlaod `npm i morgan`, http logging library
+- We should not push the node_modules to git, so create a `.gitignore` file enter the node_modules.
 
-## creating simple utils function
+## Creating simple utils function
 
 - create a folder called utils, within this we can create a files that do the specific function.
 
@@ -20,3 +22,7 @@ module.exports = {
 ```
 
 - To run the code, <i>node app</i>.
+
+## Create a port to run
+
+- In the config file inside the utils folder
