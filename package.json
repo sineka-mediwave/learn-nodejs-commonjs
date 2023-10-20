@@ -2,7 +2,7 @@
   "name": "learn-nodejs-commonjs",
   "version": "1.0.0",
   "description": "common js",
-  "main": "index.js",
+  "main": "app/index.js",
   "scripts": {
     "start": "node app",
     "dev": "nodemon"

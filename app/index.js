@@ -1,7 +1,8 @@
 const express = require("express");
+const morgan = require("morgan");
 const config = require("./config");
 const app = express();
-// app.use(express.json());
+app.use(morgan("combined"));
 
 const favs = [];
 
@@ -14,6 +15,34 @@ app.get("/", (req, res) => {
   });
 });
 
+app.post("/", (req, res) => {
+  //   console.log("==> ", req.body);
+  //   console.log("==> ", req.method);
+  //   console.log("==> ", req.headers);
+  //   console.log("==> ", req.path);
+
+  favs.push({
+    id: new Date().getTime(),
+    text: req.body.text,
+  });
+  return res.json({
+    message: "added data",
+  });
+});
+
+// Update
+app.put("/", (req, res) => {
+  return res.json({
+    message: "PUT route",
+  });
+});
+
+// DELETE
+app.delete("/", (req, res) => {
+  return res.json({
+    message: "DELETE route",
+  });
+});
 //importing utils using common js
 const { stringLength } = require("./utils/stringHelper");
 console.log("hello World");
